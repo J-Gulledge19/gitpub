@@ -4,7 +4,7 @@ const drinks = require('./models/drinks');
 const app = express();
 
 app.get('/drinks', (req, res) => {
-    res.send(drinks)
+    res.render('drinks_index.ejs', {drinks})
 })
 
 app.get('/', (req, res) => {
