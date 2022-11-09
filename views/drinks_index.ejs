@@ -9,15 +9,14 @@
 <body>
     <h1>Welcome to gitPub</h1>
 
-    <ul>
-    
-        <% drinks.forEach(v=>{ %> 
-            <li>
-                <%=v.name %> 
-            </li>
-        <% }) %>
-        
-    </ul>
+</nav>
+<ul>
+    <% for(let i = 0; i < drinks.length; i++) { %>
+        <li>
+            <a href="/drinks/<%=i%>"><%=drinks[i].name %></a>
+        </li>
+    <% } %>
+</ul>
     
     <style type="text/css">
         body {

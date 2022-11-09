@@ -8,8 +8,15 @@ app.get('/drinks', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.send(`'Welcome to the Gitpub App!'`)
+    res.send('Welcome to the Gitpub App!')
 })
+
+app.get('/fruits/:id', (req, res) => {
+    // res.render(template, data)
+    res.render('drinks_show.ejs', {
+        drink: drinks[req.params.index]
+    });
+});
 
 app.listen(process.env.PORT, () => {
     console.log(`listening on port ${process.env.PORT}`);
