@@ -10,6 +10,7 @@
     <h1>Welcome to gitPub</h1>
 
 </nav>
+<h3>Drinks</h3>
 <ul>
     <% for(let i = 0; i < drinks.length; i++) { %>
         <li>
@@ -17,11 +18,21 @@
         </li>
     <% } %>
 </ul>
-    
+<h3>Food</h3>
+<ul>
+    <% for(let i = 0; i < food.length; i++) { %>
+        <li>
+            <a href="/food/<%=i%>"><%=food[i].name %></a>
+        </li>
+    <% } %>
+</ul>
     <style type="text/css">
         body {
-          color: rgb(8, 8, 8);
-          background-color: steelblue;
+          color: rgb(4, 17, 255);
+          background-color: rgb(209, 203, 203);
+        }
+        h1 {
+            text-align: center;
         }
       </style>
 </body>
